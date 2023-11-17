@@ -49,15 +49,18 @@ fun UCPApp(
                     dospem1 = dospem1.map { id -> context.resources.getString(id)},
                     dospem2 = dospem2.map { id -> context.resources.getString(id)},
                     onSelection1Changed = { viewModel.setDospem1(it) },
-                    onSelection2Changed = { viewModel.setDospem1(it) },
-                    onSubmitButtonClick = { navController.navigate(PengelolaHalaman.Summary.name) },
+                    onSelection2Changed = { viewModel.setDospem2(it) },
+                    onSubmitButtonClick = {
+                        viewModel.setContact(it)
+                        navController.navigate(PengelolaHalaman.Summary.name) },
                 )
             }
             composable(route = PengelolaHalaman.Summary.name){
                 val context = LocalContext.current
                 HalamanDua(
                     orderUIState = uiState,
-                    onBackButtonClicked = { backNavigateToFormulir(navController) })
+                    onBackButtonClicked = { backNavigateToFormulir(navController
+                    ) })
             }
         }
     }
