@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UCP2_PAM</string>
+    <string name="hs">Haris Setiawan</string>
+    <string name="dd">Dwi Djoko P</string>
+    <string name="ak">Aprilia Kurnianti</string>
+    <string name="dp1">Dosen Pembimbing 1</string>
+    <string name="dp2">Dosen Pembimbing 2</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_back">Back</string>
+</resources>
