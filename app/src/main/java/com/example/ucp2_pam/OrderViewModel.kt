@@ -26,4 +26,15 @@ class OrderViewModel : ViewModel() {
             )
         }
     }
+
+    fun setContact(listData: MutableList<String>){
+        _stateUI.update { stateSaatIni ->
+            stateSaatIni.copy(
+                nama = listData[0],
+                nim = listData[1],
+                konsentrasi = listData[2],
+                judul = listData[3]
+            )
+        }
+    }
 }

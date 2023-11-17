@@ -24,11 +24,8 @@ fun HalamanHome(
     val image = painterResource(id = R.drawable.umy)
 
     Column (
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .padding(16.dp)
-            .fillMaxSize()
+        modifier = Modifier,
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
         Image(
             painter = image,
