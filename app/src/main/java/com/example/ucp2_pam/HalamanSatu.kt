@@ -33,7 +33,8 @@ import com.example.ucp2_pam.ui.theme.UCP2_PAMTheme
 fun HalamanSatu(
     dospem1: List<String>,
     dospem2: List<String>,
-    onSelectionChanged: (String) -> Unit,
+    onSelection1Changed: (String) -> Unit,
+    onSelection2Changed: (String) -> Unit,
     onSubmitButtonClick: (MutableList<String>) -> Unit,
 ){
     var namaTxt by rememberSaveable{
@@ -90,7 +91,6 @@ fun HalamanSatu(
                 Text(text = "Judul Skripsi")
             }
         )
-
         Column (
             modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium))){
             Row (){
@@ -100,7 +100,7 @@ fun HalamanSatu(
                             selected = dospem1YgDipilih == item,
                             onClick = {
                                 dospem1YgDipilih = item
-                                onSelectionChanged(item)
+                                onSelection1Changed(item)
                             }
                         ),
                         verticalAlignment = Alignment.CenterVertically
@@ -109,7 +109,7 @@ fun HalamanSatu(
                             selected = dospem1YgDipilih == item,
                             onClick = {
                                 dospem1YgDipilih = item
-                                onSelectionChanged(item)
+                                onSelection1Changed(item)
                             }
                         )
                         Text(item)
@@ -121,7 +121,7 @@ fun HalamanSatu(
                             selected = dospem2YgDipilih == item,
                             onClick = {
                                 dospem2YgDipilih = item
-                                onSelectionChanged(item)
+                                onSelection2Changed(item)
                             }
                         ),
                         verticalAlignment = Alignment.CenterVertically
@@ -130,7 +130,7 @@ fun HalamanSatu(
                             selected = dospem2YgDipilih == item,
                             onClick = {
                                 dospem2YgDipilih = item
-                                onSelectionChanged(item)
+                                onSelection2Changed(item)
                             }
                         )
                         Text(item)
@@ -164,7 +164,8 @@ fun PreviewHalamanSatu() {
         HalamanSatu(
             dospem1 = listOf(),
             dospem2 = listOf(),
-            onSelectionChanged = {},
+            onSelection1Changed = {},
+            onSelection2Changed = {},
             onSubmitButtonClick = {})
     }
 }

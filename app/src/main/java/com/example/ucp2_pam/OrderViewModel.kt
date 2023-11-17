@@ -14,7 +14,7 @@ class OrderViewModel : ViewModel() {
     fun setDospem1(pilihDospem1: String){
         _stateUI.update { stateSaatIni ->
             stateSaatIni.copy(
-                dosen1 = pilihDospem1
+                dospem1 = pilihDospem1
             )
         }
     }
@@ -22,7 +22,7 @@ class OrderViewModel : ViewModel() {
     fun setDospem2(pilihDospem2: String){
         _stateUI.update { stateSaatIni ->
             stateSaatIni.copy(
-                dosen2 = pilihDospem2
+                dospem2 = pilihDospem2
             )
         }
     }

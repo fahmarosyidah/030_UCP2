@@ -68,7 +68,7 @@ fun HalamanDua(
         ){
                 Button(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = {}
+                    onClick = onBackButtonClicked
                 ) {
                     Text(stringResource(R.string.btn_back))
                 }

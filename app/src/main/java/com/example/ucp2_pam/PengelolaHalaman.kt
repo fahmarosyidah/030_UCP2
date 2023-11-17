@@ -48,14 +48,23 @@ fun UCPApp(
                 HalamanSatu(
                     dospem1 = dospem1.map { id -> context.resources.getString(id)},
                     dospem2 = dospem2.map { id -> context.resources.getString(id)},
-                    onSelectionChanged = ,
-                    onSubmitButtonClick =
+                    onSelection1Changed = { viewModel.setDospem1(it) },
+                    onSelection2Changed = { viewModel.setDospem1(it) },
+                    onSubmitButtonClick = { navController.navigate(PengelolaHalaman.Summary.name) },
                 )
             }
             composable(route = PengelolaHalaman.Summary.name){
                 val context = LocalContext.current
-
+                HalamanDua(
+                    orderUIState = uiState,
+                    onBackButtonClicked = { backNavigateToFormulir(navController) })
             }
         }
     }
+}
+
+private fun backNavigateToFormulir(
+    navController: NavHostController
+){
+    navController.popBackStack(PengelolaHalaman.Formulir.name, inclusive = false)
 }
